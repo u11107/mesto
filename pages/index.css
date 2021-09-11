@@ -1,0 +1,22 @@
+@import url(../vendor/normaliz.css);
+@import url(../fonts/font.css);
+
+@import url(../block/page/page.css);
+@import url(../block/header/header.css);
+@import url(../block/header/__logo/header__logo.css);
+@import url(../block/header/__img/header__img.css);
+@import url(../block/profile/profile.css);
+@import url(../block/profile/__img/profile__img.css);
+@import url(../block/profile/__info/profile__info.css);
+@import url(../block/profile/__info-subtitle/profile__info-subtitle.css);
+@import url(../block/profile/__title/profile__title.css);
+@import url(../block/profile/__edit-button/profile__edit-button.css);
+@import url(../block/profile/__abb-button/profile__abb-button.css);
+@import url(../block/foto/foto.css);
+@import url(../block/foto/__element/foto__element.css);
+@import url(../block/foto/__figcaption/foto__figcaption.css);
+@import url(../block/foto/__grup/foto__grup.css);
+@import url(../block/foto/__items/foto__items.css);
+@import url(../block/foto/__like-box/foto__like-box.css);
+@import url(../block/foto/__like/foto__like.css);
+@import url(../block/foto/__list/foto__list.css);

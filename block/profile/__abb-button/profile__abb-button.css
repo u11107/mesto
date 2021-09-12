@@ -10,5 +10,29 @@
     box-sizing: border-box;
     border-radius: 2px;
     margin: 33px 0px 33px 183px;
-    display: flex;
+
+}
+
+
+@media screen and (max-width: 867px) {
+    .profile__abb-button {
+        margin-left: 0;
+        margin-right: 5%;
+    }
+    
+}
+
+@media screen and (max-width: 578px) {
+    .profile__abb-button {
+        margin-top: 36px;
+        width: 282px;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .profile__abb-button {
+        margin: 0;
+    }
+    
 }

@@ -1,5 +1,6 @@
 .profile__info {
     width: 294px;
+    margin-top: 22px;
     white-space: nowrap;
     margin: 0;
     font-family: 'Inter', "Helvetica Neue", Arial, sans-serif;
@@ -9,5 +10,30 @@
     line-height: 48px;
     letter-spacing: 0em;
     color: white;
-    padding: 22px 0px 16px 30px;
+    margin-bottom: 16px;
+
+}
+
+
+
+@media screen and (max-width: 569px) {
+.profile__info {
+    margin-top: 22.25;
+    font-size: 27px;
+    line-height: 2.07;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+    .profile__info {
+        margin: 0;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+    }
+    
 }

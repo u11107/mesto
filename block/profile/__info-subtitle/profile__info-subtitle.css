@@ -10,5 +10,27 @@
     white-space: nowrap;
     overflow: hidden;
     display: block;
-    padding-top: 16px;
+    margin-top: 16px;
+}
+
+@media screen and  (max-width: 569px) {
+    .profile__info-subtitle {
+        width: 282px;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media screen and  (max-width: 320px) {
+    .profile__info-subtitle {
+        width: 282px;
+        margin: 14px 0px 36px 0px;
+        text-align: center;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
 }

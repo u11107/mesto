@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
 </head>
+
 <body class=page>
     <header class="header">
         <div class="header__logo">
@@ -15,58 +17,65 @@
     </header>
 
     <main>
-        <section class="profile">      
-                <img class="profile__img" alt="фото" src="./images/profile/image.jpg">
-                <div class="profile__box">
-                    <h1 class="profile__info">Жак-Ив Кусто<button class="profile__edit-button"></button></h1>
-                    <p class="profile__info-subtitle">Исследователь океана</p>
-                </div>
-                <button class="profile__abb-button"></button>
+        <section class="profile">
+            <img class="profile__img" alt="фото" src="./images/profile/image.jpg">
+            <div class="profile__box">
+                <h1 class="profile__info">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button"></button>            
+                <p class="profile__info-subtitle">Исследователь океана</p>
+            </div>
+            <button class="profile__abb-button"></button>
         </section>
 
         <section class="foto">
             <ul class="foto__grup">
                 <li class="foto__list">
-                    <figure class="foto__element">
+                    <div class="foto__element">
                         <img class="foto__items" alt="фото" src="./images/kirill-pershin-1556355-unspl.jpg">
-                        <figcaption class="foto__figcaption">Домбай</figcaption><img class="foto__like" alt="сердце" src="./images/hert.svg">           
-                    </figure>
-                    
+                        <div class="foto__figcaption">Домбай</div>
+                        <img class="foto__like" alt="сердце" src="./images/hert.svg">
+                    </div>
+
                 </li>
 
                 <li class="foto__list">
-                    <figure class="foto__element">
+                    <div class="foto__element">
                         <img class="foto__items" alt="фото" src="./images/kirill-pershin-1088404-.jpg">
-                        <figcaption class="foto__figcaption">Карачаевск<img class="foto__like" alt="сердце" src="./images/hert.svg"></figcaption>                      
-                    </figure>
+                        <h2 class="foto__figcaption">Карачаевск<img class="foto__like" alt="сердце"
+                                src="./images/hert.svg"></h2>
+                    </div>
                 </li>
 
                 <li class="foto__list">
-                    <figure class="foto__element">
+                    <div class="foto__element">
                         <img class="foto__items" alt="фото" src="./images/kirill-pershin-1404681-unspl.jpg">
-                        <figcaption class="foto__figcaption">Гора Эльбрус<img class="foto__like" alt="сердце" src="./images/hert.svg"></figcaption>
-                    </figure>
+                        <h2 class="foto__figcaption">Гора Эльбрус<img class="foto__like" alt="сердце"
+                                src="./images/hert.svg"></h2>
+                    </div>
                 </li>
 
                 <li class="foto__list">
-                    <figure class="foto__element">
+                    <div class="foto__element">
                         <img class="foto__items" alt="фото" src="./images/kirill-pershin-1556355-unspl.jpg">
-                        <figcaption class="foto__figcaption">Домбай<img class="foto__like" alt="сердце" src="./images/hert.svg"></figcaption>
-                    </figure>
+                        <h2 class="foto__figcaption">Домбай<img class="foto__like" alt="сердце" src="./images/hert.svg">
+                        </h2>
+                    </div>
                 </li>
 
                 <li class="foto__list">
-                    <figure class="foto__element">
+                    <div class="foto__element">
                         <img class="foto__items" alt="фото" src="./images/kirill-pershin-1404681-unspl.jpg">
-                        <figcaption class="foto__figcaption">Гора Эльбрус<img class="foto__like" alt="сердце" src="./images/hert.svg"></figcaption>
-                    </figure>
+                        <h2 class="foto__figcaption">Гора Эльбрус<img class="foto__like" alt="сердце"
+                                src="./images/hert.svg"></h2>
+                    </div>
                 </li>
 
                 <li class="foto__list">
-                    <figure class="foto__element">
+                    <div class="foto__element">
                         <img class="foto__items" alt="фото" src="./images/kirill-pershin-1088404-.jpg">
-                        <figcaption class="foto__figcaption">Карачаево-Черкесия<img class="foto__like" alt="сердце" src="./images/hert.svg"></figcaption>
-                    </figure>
+                        <h2 class="foto__figcaption">Карачаево-Черкесия<img class="foto__like" alt="сердце"
+                                src="./images/hert.svg"></h2>
+                    </div>
                 </li>
 
             </ul>
@@ -75,8 +84,26 @@
         <footer class="footer">
             <p class="footer__author">&copy; 2020. Мубинов Ринат</p>
         </footer>
-       
+        <section class="popup">
+            <div class="popup__container">
+                <button type="button" class="popup__btn popup__btn_action_close"
+                    title="Закрыть без сохранения">
+                </button>
+                <form class="popup__form">
+                    <h3 class="popup__title">Редактировать профиль</h3>
+                    <label class="popup__label-name">
+                        <input  maxlength="40" minlength="2" class="popup__item popup__item_type_name" placeholder="Имя" required="">
+                    </label>
+
+                    <label class="popuup__label-vocation">
+                        <input  maxlength="40" minlength="2" class="popup__item popup__item_type_vocation" placeholder="Призвание" required="">
+                    </label>
+                    <button type="submit" value="Сохранить" class="popup__btn popup__btn_action_submit">Сохранить</button>
+                </form>
+            </div>
+        </section>
     </main>
-    
+<script src="./js/script.js"></script>
 </body>
+
 </html>

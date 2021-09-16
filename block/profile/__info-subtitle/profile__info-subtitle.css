@@ -13,11 +13,21 @@
     margin-top: 16px;
 }
 
+@media screen and  (max-width: 741px) {
+    .profile__info-subtitle {
+        width: 282px;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+
 @media screen and  (max-width: 569px) {
     .profile__info-subtitle {
         width: 282px;
         margin: auto;
         text-align: center;
+        margin-bottom: 15px;
     }
 }
 

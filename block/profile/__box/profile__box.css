@@ -1,6 +1,8 @@
 .profile__box {
     display: flex;
     flex-direction: row;
+    max-width: 336px;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
@@ -29,8 +31,8 @@
 
 @media screen and (max-width: 360px) {
     .profile__box {
+        max-width: 282px; 
         width: 100%;
-
         margin-left: 0px;
     }
 }

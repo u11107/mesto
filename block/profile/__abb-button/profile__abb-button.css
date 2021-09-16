@@ -1,6 +1,6 @@
 .profile__abb-button {
     padding: 0px;
-    width: 150px;
+    width: 171px;
     height: 50px;
     background-color: #000000;
     background-image: url("../../../images/profile/Add\ Button.svg");
@@ -9,15 +9,14 @@
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 2px;
-    margin: 33px 0px 33px 183px;
+    margin: 33px 0px 33px 0px;
 
 }
 
 
 @media screen and (max-width: 867px) {
     .profile__abb-button {
-        margin-left: 0;
-        margin-right: 5%;
+        background-image: url("../../../images/Vector\ \(3\).svg");
     }
     
 }
@@ -41,4 +40,9 @@
         width: 282;
     }
     
+}
+
+.profile__abb-button:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }

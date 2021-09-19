@@ -1,0 +1,12 @@
+.foto__list {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    justify-self: center;
+    min-width: 282px;
+    max-width: 282px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #FFFFFF;
+}

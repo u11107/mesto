@@ -1,0 +1,18 @@
+.footer__author {
+    margin: 0;
+    font-family: 'Inter', "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+}
+
+@media screen and (max-width: 560px) {
+    .footer__author {
+        margin: 0;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+    

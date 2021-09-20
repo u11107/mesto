@@ -1,15 +1,10 @@
 .foto__like {
     background-image: url('../../../images/hert.svg');
-    padding: 0;
+    background-repeat: no-repeat;
     min-width: 22px;
     min-height: 19px;
     border: none;
-    position: relative;
     background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 22px 19px;
-    background-position: 50%;
-    display: flex;
 }
 
 .foto__like:hover {

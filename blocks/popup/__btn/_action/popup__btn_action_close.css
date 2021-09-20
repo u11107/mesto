@@ -28,3 +28,12 @@
     }
     
 }
+
+@media screen and (max-width: 320px) {
+    .popup__btn_action_close {
+        width: 20px;
+        height: 20px;
+        top: -35px;
+    }
+    
+}

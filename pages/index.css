@@ -16,7 +16,7 @@
 @import url(../blocks/foto/__figcaption/foto__figcaption.css);
 @import url(../blocks/foto/__grup/foto__grup.css);
 @import url(../blocks/foto/__items/foto__items.css);
-@import url(../blocks/foto/__like-box/foto__like-box.css);
+@import url(../blocks/foto/like-box/foto__like-box.css);
 @import url(../blocks/foto/__like/foto__like.css);
 @import url(../blocks/foto/__list/foto__list.css);
 @import url(../blocks/footer/footer.css);

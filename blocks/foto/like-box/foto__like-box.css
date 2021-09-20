@@ -1,0 +1,11 @@
+.foto__like-box {
+    margin: 0;
+    position: relative;
+    top: -48px;
+    margin-right: 30px;
+    min-height: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}

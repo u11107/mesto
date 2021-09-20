@@ -38,7 +38,6 @@ function formSubmitHandler (evt) {
 
 closePopup.addEventListener('click', popupToggle);
 openPopup.addEventListener('click', setPopupInoutValue);
-saveBtn.addEventListener('submit', savePopupValue);
 
 
 

@@ -20,29 +20,20 @@
 
 @media screen and (max-width: 569px) {
 .profile__info {
-    margin-top: 22px;
     font-size: 27px;
     line-height: 2.07;
     text-align: center;
     margin-bottom: 0px;
     width: 189px;
     margin: 0;
-    font-style: normal;
-    font-weight: 500;
   }
 }
 
 @media screen and (max-width: 320px) {
     .profile__info {
-        margin-bottom: 0px;
         margin-top: 29px;
         margin-left: 25px;
-        width: 189px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 27px;
         line-height: 1.2;
-        text-align: center;
     }
  
 }

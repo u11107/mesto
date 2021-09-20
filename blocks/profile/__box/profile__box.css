@@ -10,18 +10,10 @@
     
 }
 
-@media screen and (max-width: 768px) {
-   .profile__box  {
-       display: flex;
-   }
-    
-}
-
 @media screen and (max-width: 686px) {
     .profile__box {
         justify-content: center;
         margin-left: 0px;
-        display: flex;
         align-items: baseline;
     }
 }
@@ -29,7 +21,5 @@
 @media screen and (max-width: 360px) {
     .profile__box {
         max-width: 282px;
-        width: 100%;
-        margin-left: 0px;
     }
 }

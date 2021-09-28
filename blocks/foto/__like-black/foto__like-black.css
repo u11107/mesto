@@ -1,0 +1,9 @@
+.foto__like-black {
+    background-image: url('../../../images/hert.svg');
+}
+
+
+.foto__like-black:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}

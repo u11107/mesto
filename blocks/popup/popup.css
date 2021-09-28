@@ -11,3 +11,7 @@
     width: 100%;
 }
 
+.popup {
+    visibility: visible;
+    opacity: 1;
+}

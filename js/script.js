@@ -7,15 +7,11 @@ const profilSubtitle = document.querySelector('.profile__info-subtitle');
 
 const saveBtn = popup.querySelector('.popup__btn_action_submit');
 
-const popupAdd = document.querySelector('.popup__add_card');// второй модальное окно
-const openPopupEditBtn = document.querySelector('.profile__abb-button');
-const closePopupEdit = popupAdd.querySelector('.popup__btn_action_close');
+const sectionFotoCard = document.querySelector('.foto__grup');
 
-const foto = document.querySelector('.foto');// like
-const blackLike = foto.querySelector('.foto__like');
-const btnFotoLike = foto.querySelector('.foto__like-black');
 
-let formElement = popup.querySelector('.popup__form');// поля ввода для первого модального она
+
+let formElement = popup.querySelector('.popup__form');
 let nameInput = popup.querySelector('.popup__item_type_name');
 let jobInput = popup.querySelector('.popup__item_type_vocation');
 
@@ -23,25 +19,10 @@ function popupToggle() {
     popup.classList.toggle('popup_open');
 }
 
-function popupEditToggle() {
-    popupAdd.classList.toggle('popup_open');
-}
-
-function likeToggle() {
-    blackLike.classList.toggle('foto__like-black')
-}
-
-
 function setPopupInoutValue() {
     nameInput.value = profilInfo.textContent
     jobInput.value = profilSubtitle.textContent
     popupToggle();
-
-}
-
-function setPopupAdd() {
-    nameInput.value = profilInfo.textContent
-    jobInput.value = profilSubtitle.textContent
 }
 
 formElement.addEventListener('submit', formSubmitHandler); 
@@ -55,17 +36,67 @@ function formSubmitHandler (evt) {
     evt.preventDefault(); 
     savePopupValue();
     popupToggle();
-    
 }
 
-closePopup.addEventListener('click', popupToggle);// открытие и закрытие первого модально окна
+closePopup.addEventListener('click', popupToggle);
 openPopup.addEventListener('click', setPopupInoutValue);
 
+const initialCards  = [
+    {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+  ];
+
+const popupAdd = document.querySelector('.popup__add_card');// второй модальное окно
+const openPopupEditBtn = document.querySelector('.profile__abb-button');
+const closePopupEdit = popupAdd.querySelector('.popup__btn_action_close');
+
+function popupEditToggle() {
+    popupAdd.classList.toggle('popup_open');
+}
 
 openPopupEditBtn.addEventListener('click', popupEditToggle);// откыртие и закрытие второго модального окна
 closePopupEdit.addEventListener('click', popupEditToggle);
 
-btnFotoLike.addEventListener('click', likeToggle);// слушатель кнопки лайк
+
+//добавление карточек из коробки
+ const fotoGrup = document.querySelector('.foto__grup');
+
+function addPhotoCardToDOM(elementLink, elementName) {
+    const templateCard = document.querySelector('#templateFoto').content;
+    const templateItems = templateCard.querySelector('.foto__list').cloneNode(true);
+    templateItems.querySelector('.foto__items').src = elementLink;
+    templateItems.querySelector('.foto__items').alt = elementName;
+    templateItems.querySelector('.foto__figcaption').textContent = elementName;
+    return templateItems;
+};
 
 
+    initialCards.forEach((data) => {
+      const newCard = addPhotoCardToDOM(data.link, data.name);
+      fotoGrup.append(newCard);
+    });
+  
 
+    

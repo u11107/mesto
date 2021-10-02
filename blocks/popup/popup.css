@@ -9,9 +9,6 @@
     align-items: center;
     display: none;
     width: 100%;
+
 }
 
-.popup {
-    visibility: visible;
-    opacity: 1;
-}

@@ -27,53 +27,7 @@
 
         <section class="foto">
             <ul class="foto__grup">
-                <li class="foto__list">             
-                        <img class="foto__items" alt="Домбай" src="./images/kirill-pershin-1556355-unspl.jpg">
-                        <div class="foto__like-box">
-                            <h2 class="foto__figcaption">Домбай</h2>
-                        <button type="button" class="foto__like foto__like-black" aria-label="кнопка like"></button>
-                        </div>                       
-                </li>
-
-                <li class="foto__list">                 
-                        <img class="foto__items" alt="Карачаевск" src="./images/kirill-pershin-1088404-.jpg">
-                        <div class="foto__like-box">
-                            <h2 class="foto__figcaption">Карачаевск</h2>
-                            <button type="button" class="foto__like foto__like-black" aria-label="кнопка like"></button>
-                        </div>                       
-                </li>
-
-                <li class="foto__list">                 
-                        <img class="foto__items" alt="Гора Эльбрус" src="./images/kirill-pershin-1404681-unspl.jpg">
-                        <div class="foto__like-box">
-                            <h2 class="foto__figcaption">Гора Эльбрус</h2>
-                            <button type="button" class="foto__like foto__like-black" aria-label="кнопка like"></button>
-                        </div>
-                </li>
-
-                <li class="foto__list">                
-                        <img class="foto__items" alt="Домбай" src="./images/kirill-pershin-1556355-unspl.jpg">
-                        <div class="foto__like-box">
-                            <h2 class="foto__figcaption">Домбай</h2>
-                            <button type="button" class="foto__like foto__like-black" aria-label="кнопка like"></button>
-                        </div>                   
-                </li>
-
-                <li class="foto__list">                 
-                        <img class="foto__items" alt="Гора Эльбруc" src="./images/kirill-pershin-1404681-unspl.jpg">
-                        <div class="foto__like-box">
-                            <h2 class="foto__figcaption">Гора Эльбруc</h2>
-                            <button type="button" class="foto__like foto__like-black" aria-label="кнопка like"></button>
-                        </div>      
-                </li>
-
-                <li class="foto__list">                
-                        <img class="foto__items" alt="Карачаево-Черкесия" src="./images/kirill-pershin-1088404-.jpg">
-                        <div class="foto__like-box">
-                            <h2 class="foto__figcaption">Карачаево-Черкесия</h2>
-                            <button type="button" class="foto__like foto__like-black" aria-label="кнопка like"></button>
-                        </div>                                                         
-                </li>
+                
             </ul>
         </section>
 
@@ -107,7 +61,17 @@
             </div>
         </section>
     </main>
-<script src="./js/script.js"></script>
+    <template id = "templateFoto">
+        <li class="foto__list"> 
+            <button class="foto__delete-button"></button>             
+            <img class="foto__items" alt="#" src="#">
+            <div class="foto__like-box">
+                <h2 class="foto__figcaption"></h2>
+            <button type="button" class="foto__like foto__like-black" aria-label="кнопка like"></button>
+            </div>                       
+        </li>
+    </template>
+<script defer src="./js/script.js"></script>
 </body>
 
 </html>

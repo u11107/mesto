@@ -80,23 +80,47 @@ openPopupEditBtn.addEventListener('click', popupEditToggle);// откыртие 
 closePopupEdit.addEventListener('click', popupEditToggle);
 
 
-//добавление карточек из коробки
+
  const fotoGrup = document.querySelector('.foto__grup');
 
+
+ 
+ //добавление карточек из коробки
 function addPhotoCardToDOM(elementLink, elementName) {
     const templateCard = document.querySelector('#templateFoto').content;
     const templateItems = templateCard.querySelector('.foto__list').cloneNode(true);
-    templateItems.querySelector('.foto__items').src = elementLink;
-    templateItems.querySelector('.foto__items').alt = elementName;
+    const btnDelete = templateItems.querySelector('.foto__delete-button');
     templateItems.querySelector('.foto__figcaption').textContent = elementName;
+    templateItems.querySelector('.foto__items').alt = elementName;
+    templateItems.querySelector('.foto__items').src = elementLink;
+    //лайк карточки
+    const likeBtn = templateItems.querySelector('.foto__like');
+    likeBtn.addEventListener('click', () => {
+      likeToggle(likeBtn);
+    });
+// удаление карточки
+    btnDelete.addEventListener('click', deleteCardItems);
+
     return templateItems;
-};
+}
+//like
+  function likeToggle(likeBtn) {
+    likeBtn.classList.toggle('foto__like-black');
+  }
 
 
+  //удаление карточки
+  function deleteCardItems(evt) {
+    const elementDelete = evt.target.closest('.foto__list');
+    elementDelete.remove();
+  }
+
+// из коробки
     initialCards.forEach((data) => {
       const newCard = addPhotoCardToDOM(data.link, data.name);
       fotoGrup.append(newCard);
     });
+
   
 
-    
+

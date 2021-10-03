@@ -9,11 +9,16 @@ const saveBtn = popup.querySelector('.popup__btn_action_submit');
 
 const sectionFotoCard = document.querySelector('.foto__grup');
 
+const popupAddCard = document.querySelector('.popup__add_form');
 
 
-let formElement = popup.querySelector('.popup__form');
+
+
+const formElement = popup.querySelector('.popup__form');
+
 let nameInput = popup.querySelector('.popup__item_type_name');
 let jobInput = popup.querySelector('.popup__item_type_vocation');
+
 
 function popupToggle() {
     popup.classList.toggle('popup_open');
@@ -25,6 +30,7 @@ function setPopupInoutValue() {
     popupToggle();
 }
 
+
 formElement.addEventListener('submit', formSubmitHandler); 
 
 function savePopupValue() {
@@ -33,12 +39,15 @@ function savePopupValue() {
 }
 
 function formSubmitHandler (evt) {
-    evt.preventDefault(); 
+    evt.preventDefault();
     savePopupValue();
     popupToggle();
 }
 
+
+//открытие закрытие попапа
 closePopup.addEventListener('click', popupToggle);
+//закрытие по
 openPopup.addEventListener('click', setPopupInoutValue);
 
 const initialCards  = [
@@ -82,7 +91,7 @@ closePopupEdit.addEventListener('click', popupEditToggle);
 
 
  const fotoGrup = document.querySelector('.foto__grup');
-
+ const  fotoList = document.querySelector('.foto__list');
 
  
  //добавление карточек из коробки
@@ -121,6 +130,21 @@ function addPhotoCardToDOM(elementLink, elementName) {
       fotoGrup.append(newCard);
     });
 
-  
+
+//удаление карточки
+function addCard(evt) {
+  evt.preventDefault();
+
+const data = {
+  name: document.querySelector('.popup__item_type_title').value,
+  link: document.querySelector('.popup__item_type_link').value
+}
 
 
+ fotoGrup.prepend(addPhotoCardToDOM(data.link, data.name))
+ evt.currentTarget.reset();
+ popupEditToggle();
+
+}
+
+popupAddCard.addEventListener('submit', addCard);

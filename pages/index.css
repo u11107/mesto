@@ -33,3 +33,5 @@
 @import url(../blocks/popup/__add_card/popup__add_card.css);
 @import url(../blocks/foto/__like-black/foto__like-black.css);
 @import url(../blocks/foto/__delete-button/foto__delete-button.css);
+@import url(../blocks/popup/__add_form/popup__add_form.css);
+@import url(../blocks/popup/__image_foto/popup__image_foto.css);

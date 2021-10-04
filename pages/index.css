@@ -35,3 +35,6 @@
 @import url(../blocks/foto/__delete-button/foto__delete-button.css);
 @import url(../blocks/popup/__add_form/popup__add_form.css);
 @import url(../blocks/popup/__image_foto/popup__image_foto.css);
+@import url(../blocks/popup/__container/popup__container_window_on.css);
+@import url(../blocks/popup/__container/popup__container_window.css);
+@import url(../blocks/popup/__btn/_action/popup__btn_action_img.css);

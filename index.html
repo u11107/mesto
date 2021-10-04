@@ -34,17 +34,8 @@
         <footer class="footer">
             <p class="footer__author">&copy; 2020. Мубинов Ринат</p>
         </footer>
-        <section class="popup">
-            <div class='popup popup__foto'>
-                <div class='popup__element'>
-                    <button type="button" class="popup__btn popup__btn_action_close"title="Закрыть без сохранения" aria-label="закрыть без сохранения"></button>
-                     <figure class="popup__figure">
-                        <img src="#" class="popup__image_foto" alt="Image">
-                        <figcaption class="popup__image-caption"></figcaption>
-                      </figure>
-                </div>
-            </div>
 
+        <div class="popup">
             <div class="popup__container">
                 <button type="button" class="popup__btn popup__btn_action_close"
                     title="Закрыть без сохранения" aria-label="закрыть без сохранения">
@@ -56,9 +47,21 @@
                     <button type="submit" value="Сохранить" class="popup__btn popup__btn_action_submit" aria-label="сохранить">Сохранить</button>
                 </form>
             </div>
-        </section>
+        </div>
+
+        <div class="popup">
+            <div class="popup popup__foto">
+                <div class="popup__container popup__container_window popup__container_window_on">
+                    <button type="button" class="popup__btn popup__btn_action_img" title="Закрыть без сохранения" aria-label="закрыть без сохранения"></button>
+                        <figure class="popup__figure">
+                            <img src="#" class="popup__image_foto" alt="Image">
+                            <figcaption class="popup__image-caption"></figcaption>
+                      </figure>
+                </div>
+            </div>
+        </div>
         
-        <section class="popup popup__add_card">
+        <div class="popup popup__add_card">
             <div class="popup__container">
                 <button type="button" class="popup__btn popup__btn_action_close"
                     title="Закрыть без сохранения" aria-label="закрыть без сохранения">
@@ -70,7 +73,8 @@
                     <button type="submit" value="Сохранить" class="popup__btn popup__btn_action_submit" aria-label="сохранить">Сохранить</button>
                 </form>
             </div>
-        </section>
+        </div>
+
     </main>
     <template id = "templateFoto">
         <li class="foto__list"> 

@@ -1,0 +1,15 @@
+.popup__btn_action_img {
+    background-image: url(../../../../images/Close.svg);
+    position: absolute;
+    background-position: 50%;
+    width: 32px;
+    height: 32px;
+    top: -38px;
+    right: -42px;
+    background-size: contain;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    outline: none;
+}    

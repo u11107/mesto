@@ -1,20 +1,22 @@
 const popup = document.querySelector('.popup');
 const openPopup = document.querySelector('.profile__edit-button');
 const closePopup = popup.querySelector('.popup__btn_action_close');
-
 const profilInfo = document.querySelector('.profile__info');
 const profilSubtitle = document.querySelector('.profile__info-subtitle');
-
 const saveBtn = popup.querySelector('.popup__btn_action_submit');
-
 const sectionFotoCard = document.querySelector('.foto__grup');
-
 const popupAddCard = document.querySelector('.popup__add_form');
-
-
-
-
 const formElement = popup.querySelector('.popup__form');
+const popupAdd = document.querySelector('.popup__add_card');
+const openPopupEditBtn = document.querySelector('.profile__abb-button');
+const closePopupEdit = popupAdd.querySelector('.popup__btn_action_close');
+const fotoGrup = document.querySelector('.foto__grup');
+const fotoList = document.querySelector('.foto__list');
+const windowCard = document.querySelector('.popup__foto');
+const windowFoto = document.querySelector('.popup__container_window');
+const fotoItem = document.querySelector('.foto__items');
+const closeImg = document.querySelector('.popup__btn_action_img');
+
 
 let nameInput = popup.querySelector('.popup__item_type_name');
 let jobInput = popup.querySelector('.popup__item_type_vocation');
@@ -30,9 +32,6 @@ function setPopupInoutValue() {
     popupToggle();
 }
 
-
-formElement.addEventListener('submit', formSubmitHandler); 
-
 function savePopupValue() {
     profilInfo.textContent = nameInput.value
     profilSubtitle.textContent = jobInput.value 
@@ -44,11 +43,9 @@ function formSubmitHandler (evt) {
     popupToggle();
 }
 
-
-//открытие закрытие попапа
-closePopup.addEventListener('click', popupToggle);
-//закрытие по
+formElement.addEventListener('submit', formSubmitHandler); 
 openPopup.addEventListener('click', setPopupInoutValue);
+closePopup.addEventListener('click', popupToggle);
 
 const initialCards  = [
     {
@@ -77,9 +74,6 @@ const initialCards  = [
     }
   ];
 
-const popupAdd = document.querySelector('.popup__add_card');// второй модальное окно
-const openPopupEditBtn = document.querySelector('.profile__abb-button');
-const closePopupEdit = popupAdd.querySelector('.popup__btn_action_close');
 
 function popupEditToggle() {
     popupAdd.classList.toggle('popup_open');
@@ -88,10 +82,6 @@ function popupEditToggle() {
 openPopupEditBtn.addEventListener('click', popupEditToggle);// откыртие и закрытие второго модального окна
 closePopupEdit.addEventListener('click', popupEditToggle);
 
-
-
- const fotoGrup = document.querySelector('.foto__grup');
- const  fotoList = document.querySelector('.foto__list');
 
  
  //добавление карточек из коробки
@@ -102,13 +92,22 @@ function addPhotoCardToDOM(elementLink, elementName) {
     templateItems.querySelector('.foto__figcaption').textContent = elementName;
     templateItems.querySelector('.foto__items').alt = elementName;
     templateItems.querySelector('.foto__items').src = elementLink;
+
+
     //лайк карточки
     const likeBtn = templateItems.querySelector('.foto__like');
     likeBtn.addEventListener('click', () => {
       likeToggle(likeBtn);
     });
+
+
 // удаление карточки
     btnDelete.addEventListener('click', deleteCardItems);
+
+    const fotoItem = templateItems.querySelector('.foto__items')
+    fotoItem.addEventListener('click', () => {
+    openWindowCard({name:elementName, link:elementLink});
+    });
 
     return templateItems;
 }
@@ -130,8 +129,7 @@ function addPhotoCardToDOM(elementLink, elementName) {
       fotoGrup.append(newCard);
     });
 
-
-//удаление карточки
+//создание карточки
 function addCard(evt) {
   evt.preventDefault();
 
@@ -144,7 +142,45 @@ const data = {
  fotoGrup.prepend(addPhotoCardToDOM(data.link, data.name))
  evt.currentTarget.reset();
  popupEditToggle();
-
 }
 
+
+//сохранение и закрытие второго модального окна.
 popupAddCard.addEventListener('submit', addCard);
+
+
+function openWindowCard(data) {
+  windowCard.querySelector('.popup__image_foto').src = data.link;
+  windowCard.querySelector('.popup__image-caption').textContent = data.name;
+  windowCard.classList.add('popup_open');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
